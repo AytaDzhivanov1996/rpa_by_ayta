@@ -34,7 +34,7 @@ def rpa_challenge(file):
             person = data_frame.iloc[person_index]
             forms = cells[i].find_elements(By.XPATH, "//input")
             forms[i].send_keys(person[cells[i].text])
-            time.sleep(0.5)
+            time.sleep(0.25)
         driver.find_element(By.CSS_SELECTOR, 'input.btn.uiColorButton').click()
     
     #Сохранение скриншота
